@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Website_Project_2.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form class="form-horizontal" runat="server">
+        <div class="container">
+            <header class="jumbotron">
+                <table>
+                    <tr>
+                        <td>
+                            <img id="image" src="~/Images/beachphote.jpg" alt="Keep trying" height="120" width="150" />
+                        </td>
+                        <td>
+                            <h3>The Travel Experts</h3>
+                        </td>
+                    </tr>
+                </table>
+            </header>
+            <main>
+                <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Travel Experts</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
