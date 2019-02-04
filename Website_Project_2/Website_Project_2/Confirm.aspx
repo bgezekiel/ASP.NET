@@ -79,11 +79,24 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm-3"><label>Username</label></div>
+                    <div class="col-sm-9">
+                        <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3"><label>Password</label></div>
+                    <div class="col-sm-9">
+                        <asp:Label ID="lblPassword" runat="server"></asp:Label>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-sm-3"><label>Preferred method</label></div>
                     <div class="col-sm-9">
                         <asp:Label ID="lblPreferredMethod" runat="server"></asp:Label>
                     </div>
                 </div>
+
 
                 <!-- buttons -->
                  <div class="form-group">
@@ -91,7 +104,7 @@
                         <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request" 
                             CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
                         <asp:Button ID="btnModify" runat="server" Text="Modify Request" 
-                            CssClass="btn btn-primary" PostBackUrl="~/Request.aspx" OnClick="btnModify_Click" />
+                            CssClass="btn btn-primary" PostBackUrl="~/Register.aspx" OnClick="btnModify_Click" />
                     </div>
                 </div>
 
