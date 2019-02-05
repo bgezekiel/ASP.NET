@@ -226,7 +226,7 @@
                                     <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
 
 
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="click-btn btn btn-default"><img src="Images/email.png" /></button></button>
                                     <div style="position: absolute; left: -5000px;">
                                         <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                     </div>
@@ -245,10 +245,10 @@
                         <h6>Follow Us</h6>
                         <p>Let us be social</p>
                         <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
+                            <a href="facebook.com"><img src="Images/facebook.png" /></a>
+                            <a href="twitter.com"><img src="Images/twitter.png" /></a>
+                            <a href="instagram.com"><img src="Images/gram.png" /></a>
+                            <a href="youtube.com"><img src="Images/tube.png" /></a>
                         </div>
                     </div>
                 </div>
