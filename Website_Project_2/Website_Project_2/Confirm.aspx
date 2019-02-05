@@ -33,7 +33,7 @@
 </head>
 <body>--%>
     <!-- start banner Area -->
-    <section class="banner-area" id="home">
+    <%--<section class="banner-area" id="home">
         <!-- Start Header Area -->
         <header class="default-header">
             <nav class="navbar navbar-expand-lg  navbar-light">
@@ -64,9 +64,9 @@
                     </div>
                 </div>
             </nav>
-        </header>
+        </header>--%>
         <!-- End Header Area -->
-    </section>
+ <%--   </section>--%>
     <main>
         <form id="form1" class="form-horizontal">
             <div class="main">
