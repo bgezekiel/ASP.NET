@@ -119,9 +119,21 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="TripDetails.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BookingDetails.cs" />
+    <Compile Include="App_Code\Bookings.cs" />
+    <Compile Include="App_Code\Package.cs" />
+    <Compile Include="App_Code\PackageDB.cs" />
+    <Compile Include="TripDetails.aspx.cs">
+      <DependentUpon>TripDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TripDetails.aspx.designer.cs">
+      <DependentUpon>TripDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
