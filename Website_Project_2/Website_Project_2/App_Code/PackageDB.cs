@@ -52,7 +52,7 @@ namespace Website_Project_2.App_Code
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public static List<Bookings> GetNewBookings(int custid)
+        public static List<Bookings> GetNewBookings()
         {
             List<Bookings> booking = new List<Bookings>();
             Bookings b;
