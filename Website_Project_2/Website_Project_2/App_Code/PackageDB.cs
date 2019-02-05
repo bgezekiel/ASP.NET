@@ -18,95 +18,96 @@ namespace Website_Project_2.App_Code
                 ["ConnectionString"].ConnectionString;
         }
 
-        //[DataObjectMethod(DataObjectMethodType.Select)]
-        //public static List<Package> GetPackages(int packID)
-        //{
-        //    List<Package> pack = new List<Package>();
-        //    Package p;
-        //    string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc FROM Packages WHERE PackageId = @PackageId";
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static List<Package> GetPackages(int packID)
+        {
+            List<Package> pack = new List<Package>();
+            Package p;
+            string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc FROM Packages WHERE PackageId = @PackageId";
 
-        //    using (SqlConnection con = new SqlConnection(GetConnectionString()))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand(sql, con))
-        //        {
-        //            cmd.Parameters.AddWithValue("@PackageId", packID);
-        //            con.Open();
-        //            SqlDataReader reader = cmd.ExecuteReader();
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@PackageId", packID);
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        //            while (reader.Read())
-        //            {
-        //                p = new Package();
-        //                p.PackageId = (int)reader["PackageId"];
-        //                p.PkgName = reader["PkgName"].ToString();
-        //                p.PkgStartDate = (DateTime)reader["PkgStartDate"];
-        //                p.PkgEndDate = (DateTime)reader["PkgEndDate"];
-        //                p.PkgDesc = reader["PkgDesc"].ToString();
-        //                p.PkgBasePrice = (decimal)reader["PkgBasePrice"];
+                    while (reader.Read())
+                    {
+                        p = new Package();
+                        p.PackageId = (int)reader["PackageId"];
+                        p.PkgName = reader["PkgName"].ToString();
+                        p.PkgStartDate = (DateTime)reader["PkgStartDate"];
+                        p.PkgEndDate = (DateTime)reader["PkgEndDate"];
+                        p.PkgDesc = reader["PkgDesc"].ToString();
+                        p.PkgBasePrice = (decimal)reader["PkgBasePrice"];
 
-        //                pack.Add(p);
-        //            }
-        //            reader.Close();
-        //        }
-        //    }
-        //    return pack;
-        //}
+                        pack.Add(p);
+                    }
+                    reader.Close();
+                }
+            }
+            return pack;
+        }
 
-        //[DataObjectMethod(DataObjectMethodType.Select)]
-        //public static List<Bookings> GetNewBookings(int custid)
-        //{
-        //    List<Bookings> booking = new List<Bookings>();
-        //    Bookings b;
-        //    using (SqlConnection con = new SqlConnection(GetConnectionString()))
-        //    {
-        //        con.Open();
-        //        using (SqlCommand cmd = new SqlCommand("SELECT Bookings.BookingId,BookingDetails.Destination FROM Bookings JOIN BookingDetails ON Bookings.BookingId = BookingDetails.BookingId WHERE CustomerId = @cid;", con)) {
-        //            cmd.Parameters.AddWithValue("@cid", custid);
-        //            SqlDataReader reader = cmd.ExecuteReader();
-                    
-        //            while (reader.Read())
-        //            {
-        //                b = new Bookings();
-        //                b.BookingId = (int)reader["BookingId"];
-        //                b.BookingNo = reader["Destination"].ToString();
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static List<Bookings> GetNewBookings()
+        {
+            List<Bookings> booking = new List<Bookings>();
+            Bookings b;
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT Bookings.BookingId,BookingDetails.Destination FROM Bookings JOIN BookingDetails ON Bookings.BookingId = BookingDetails.BookingId;", con))//WHERE CustomerId = @cid
+                {
+                    //cmd.Parameters.AddWithValue("@cid", custid);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        //                booking.Add(b);
-        //            }
-        //            reader.Close();
-        //        }
+                    while (reader.Read())
+                    {
+                        b = new Bookings();
+                        b.BookingId = (int)reader["BookingId"];
+                        b.BookingNo = reader["Destination"].ToString();
 
-        //    }
+                        booking.Add(b);
+                    }
+                    reader.Close();
+                }
 
-        //    return booking;
-        //}
+            }
 
-        //[DataObjectMethod(DataObjectMethodType.Select)]
-        //public static List<Bookings> GetBookings() //customerId needs to be passed from session as parameter
-        //{
-        //    List<Bookings> booking = new List<Bookings>();
-        //    Bookings b;
+            return booking;
+        }
 
-        //    using (SqlConnection con = new SqlConnection(GetConnectionString()))
-        //    {
-        //        using (SqlCommand cmd = new SqlCommand("SELECT BookingId, BookingNo FROM Bookings " +
-        //            "order by len(BookingNo), BookingNo;", con))
-        //        {
-        //            con.Open();
-        //            SqlDataReader reader = cmd.ExecuteReader();
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public static List<Bookings> GetBookings() //customerId needs to be passed from session as parameter
+        {
+            List<Bookings> booking = new List<Bookings>();
+            Bookings b;
 
-        //            while (reader.Read())
-        //            {
-        //                b = new Bookings();
-        //                b.BookingId = (int)reader["BookingId"];
-        //                b.BookingNo = reader["BookingNo"].ToString();
+            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT BookingId, BookingNo FROM Bookings " +
+                    "order by len(BookingNo), BookingNo;", con))
+                {
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-        //                booking.Add(b);
-        //            }
-        //            reader.Close();
-        //        }
-        //    }
+                    while (reader.Read())
+                    {
+                        b = new Bookings();
+                        b.BookingId = (int)reader["BookingId"];
+                        b.BookingNo = reader["BookingNo"].ToString();
 
-        //    return booking;
-        //}
+                        booking.Add(b);
+                    }
+                    reader.Close();
+                }
+            }
+
+            return booking;
+        }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static DataSet getTripBookings(int packageid)
