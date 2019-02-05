@@ -67,15 +67,6 @@ namespace Website_Project_2 {
         protected global::System.Web.UI.WebControls.Label lblProvince;
         
         /// <summary>
-        /// lblPostal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPostal;
-        
-        /// <summary>
         /// lblCountry control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace Website_Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCountry;
+        
+        /// <summary>
+        /// lblPostal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPostal;
         
         /// <summary>
         /// lblHome control.
@@ -128,15 +128,6 @@ namespace Website_Project_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPassword;
-        
-        /// <summary>
-        /// lblPreferredMethod control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPreferredMethod;
         
         /// <summary>
         /// btnConfirm control.

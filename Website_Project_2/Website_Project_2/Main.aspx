@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Website_Project_2.Confirm" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Website_Project_2.Main" %>
 
 <!DOCTYPE html>
 
@@ -20,7 +20,9 @@
     <title>Travel Experts</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <!--CSS============================================= -->
+    <!--
+			CSS
+			============================================= -->
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -65,135 +67,94 @@
         </header>
         <!-- End Header Area -->
     </section>
-    <main>
-        <form id="form1" runat="server" class="form-horizontal">
-            <div class="main">
-                <div class="container">
-                    <div class="signup-content">
-                        <%--<div class="signup-img">
-                            <img src="img/slider2.jpg" alt=""/>
-                        </div>--%>
-                        <div class="signup-form">
-                            <h2>Please Confirm Your Details</h2>
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="FirstName"><b>First Name:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblFirstName" runat="server"></asp:Label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="lastName"><b>Last Name:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblLastName" runat="server"></asp:Label>
-                                </div>
-                            </div>
 
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="Address"><b>Address:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblAddress" runat="server"></asp:Label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="City"><b>City:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblCity" runat="server"></asp:Label>
-                                </div>
-                            </div>
+    <section class="default-banner active-blog-slider">
+        <div class="item-slider relative" style="background: url(img/slider1.jpg); background-size: cover;">
+            <div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+            <div class="container">
+                <div class="row fullscreen justify-content-center align-items-center">
+                    <div class="col-md-10 col-12">
+                        <div class="banner-content text-center">
+                            <h3 class="text-white mb-20 text-uppercase">Travel Experts</h3>
+                            <h1 class="text-uppercase text-white">New Adventure</h1>
+                            <p class="text-white">
+                                Join us to to book your next adventure!
+                            </p>
+                            <a href="Register.aspx" class="text-uppercase header-btn">Register Today!</a>
+                        </div>
+                    </div>
 
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="Province"><b>Province:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblProvince" runat="server"></asp:Label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="Country"><b>Country:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblCountry" runat="server"></asp:Label>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="PostalCode"><b>Postal Code:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblPostal" runat="server"></asp:Label>
-                                </div>
-                            </div>
-
-
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="HomePhone"><b>Home Phone:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblHome" runat="server"></asp:Label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="BusinessPhone"><b>Business Phone:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblBusiness" runat="server"></asp:Label>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="Email"><b>Email:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblEmail" runat="server"></asp:Label>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <label for="Ussername"><b>Username:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
-                                </div>
-                                <div class="col-sm-3">
-                                    <label for="Password"><b>Password:</b></label>
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Label ID="lblPassword" runat="server"></asp:Label>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-sm-3">
-                                    <asp:Button ID="btnConfirm" runat="server" Text="Confirm Request"
-                                        CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
-                                </div>
-                                <div class="col-sm-9">
-                                    <asp:Button ID="btnModify" runat="server" Text="Modify Request"
-                                        CssClass="btn btn-primary" PostBackUrl="~/Register.aspx" OnClick="btnModify_Click" />
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <div class="col-sm-9">
-                                        <asp:Label ID="lblMessage" runat="server" CssClass="text-info"></asp:Label>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-slider relative" style="background: url(img/slider2.jpg); background-size: cover;">
+            <div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+            <div class="container">
+                <div class="row fullscreen justify-content-center align-items-center">
+                    <div class="col-md-10 col-12">
+                        <div class="banner-content text-center">
+                            <h3 class="text-white mb-20 text-uppercase">Travel Experts</h3>
+                            <h1 class="text-uppercase text-white">New Trip</h1>
+                            <p class="text-white">
+                                Join us to to book your next adventure!
+                            </p>
+                            <a href="Register.aspx" class="text-uppercase header-btn">Register Today!</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </main>
+        </div>
+        <div class="item-slider relative" style="background: url(img/slider3.jpg); background-size: cover;">
+            <div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+            <div class="container">
+                <div class="row fullscreen justify-content-center align-items-center">
+                    <div class="col-md-10 col-12">
+                        <div class="banner-content text-center">
+                            <h3 class="text-white mb-20 text-uppercase">Travel Experts</h3>
+                            <h1 class="text-uppercase text-white">New Experience</h1>
+                            <p class="text-white">
+                                Join us to to book your next adventure!
+                            </p>
+                            <a href="Register.aspx" class="text-uppercase header-btn">Register Today!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- start contact Area -->
+    <section class="contact-area section-gap" id="contact">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-60 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Have a question? Ask us now!</h1>
+                        <p>We are excited to book your next adventure.</p>
+                    </div>
+                </div>
+            </div>
+            <form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+                        <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+                        <input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+                    </div>
+                    <div class="col-lg-6 form-group">
+                        <textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                        <button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
+                        <div class="alert-msg">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <!-- end contact Area -->
 
     <!-- start footer Area -->
     <footer class="footer-area section-gap">
@@ -268,6 +229,5 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>

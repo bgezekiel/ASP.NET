@@ -77,6 +77,32 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\linearicons.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\material-design-iconic-font.css" />
+    <Content Include="img\play-btn.png" />
+    <Content Include="img\slider1.jpg" />
+    <Content Include="img\slider2.jpg" />
+    <Content Include="img\slider3.jpg" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.counterup.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\mainreg.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\slick.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="js\vendor\jquery.min.js" />
+    <Content Include="js\waypoints.min.js" />
+    <Content Include="Main.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Images\beachphoto.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -103,6 +129,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="img\.DS_Store" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
@@ -127,9 +154,15 @@
     <Compile Include="App_Code\Bookings.cs" />
     <Compile Include="App_Code\Package.cs" />
     <Compile Include="App_Code\PackageDB.cs" />
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TripDetails.aspx.cs">
       <DependentUpon>TripDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TripDetails.aspx.designer.cs">
       <DependentUpon>TripDetails.aspx</DependentUpon>
