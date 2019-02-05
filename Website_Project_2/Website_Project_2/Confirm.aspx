@@ -79,95 +79,96 @@
                             <h2>Please Confirm Your Details</h2>
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="FirstName"><b>First Name:</b></label>
+                                    <label for="FirstName"><h5>First Name:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblFirstName" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblFirstName" runat="server"></asp:Label></h4>
                                 </div>
                                 <div class="col-sm-3">
-                                    <label for="lastName"><b>Last Name:</b></label>
+                                    <label for="lastName"><h5>Last Name:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblLastName" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblLastName" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="Address"><b>Address:</b></label>
+                                    <label for="Address"><h5>Address:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblAddress" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblAddress" runat="server"></asp:Label></h4>
                                 </div>
                                 <div class="col-sm-3">
-                                    <label for="City"><b>City:</b></label>
+                                    <label for="City"><h5>City:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblCity" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblCity" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="Province"><b>Province:</b></label>
+                                    <label for="Province"><h5>Province:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblProvince" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblProvince" runat="server"></asp:Label></h4>
                                 </div>
                                 <div class="col-sm-3">
-                                    <label for="Country"><b>Country:</b></label>
+                                    <label for="Country"><h5>Country:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblCountry" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblCountry" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="PostalCode"><b>Postal Code:</b></label>
+                                    <label for="PostalCode"><h5>Postal Code:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblPostal" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblPostal" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="HomePhone"><b>Home Phone:</b></label>
+                                    <label for="HomePhone"><h5>Home Phone:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblHome" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblHome" runat="server"></asp:Label></h4>
                                 </div>
                                 <div class="col-sm-3">
-                                    <label for="BusinessPhone"><b>Business Phone:</b></label>
+                                    <label for="BusinessPhone"><h5>Business Phone:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblBusiness" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblBusiness" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="Email"><b>Email:</b></label>
+                                    <label for="Email"><h5>Email:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblEmail" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblEmail" runat="server"></asp:Label></h4>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="col-sm-3">
-                                    <label for="Ussername"><b>Username:</b></label>
+                                    <label for="Username"><h5>Username:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                                    <h4><asp:Label ID="lblUsername" runat="server"></asp:Label></h4>
                                 </div>
-                                <div class="col-sm-3">
-                                    <label for="Password"><b>Password:</b></label>
+                                <%--<div class="col-sm-3">
+                                    <label for="Password"><h5>Password:</h5></label>
                                 </div>
                                 <div class="col-sm-9">
-                                </div>
+                                    <h4><asp:Label ID="lblPass" runat="server"></asp:Label></h4>
+                                </div>--%>
                             </div>
 
                             <div class="form-row">

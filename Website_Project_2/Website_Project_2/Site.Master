@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="Scripts/TripView.css" rel="stylesheet" />
+    <link href="css/background.css" rel="stylesheet" />
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -44,7 +46,7 @@
             <section class="banner-area" id="home">
                 <!-- Start Header Area -->
                 <header class="default-header">
-                    <nav class="navbar navbar-expand-lg  navbar-light">
+                    <nav class=" navsetting navbar navbar-expand-lg  navbar-light">
                         <div class="container">
                             <a class="navbar-brand" href="Main.aspx">
                                 <h2 class="text-white">Travel Experts</h2>
@@ -75,7 +77,8 @@
                 </header>
                 <!-- End Header Area -->
             </section>
-
+            <br />
+            <br />
             <main>
                 <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>

@@ -102,7 +102,7 @@
                                     <h5>Postal Code</h5>
                                 </label>
                                 <div class="col-sm-3">
-                                    <asp:TextBox ID="txtPostalCode" runat="server" CssClass="form-control" OnTextChanged="txtCountry0_TextChanged"></asp:TextBox>
+                                    <asp:TextBox ID="txtPostalCode" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                                 <div class="col-sm-5">
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
