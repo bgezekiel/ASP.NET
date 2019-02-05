@@ -110,22 +110,38 @@ namespace Website_Project_2.App_Code
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public static DataSet getTripBookings(int packageid)
-        {
-            string sql = "SELECT BookingDetailId, ItineraryNo, TripStart, TripEnd," +
-                " Destination, BasePrice FROM BookingDetails WHERE BookingId = @pid;"; //add @sPackageID
 
+        public static List<BookingDetails> GetBookingDetails(int packageid)
+        {
+            List<BookingDetails> bdList = new List<BookingDetails>();
+            BookingDetails bd;
+            string sql = "SELECT BookingDetailId, ItineraryNo, TripStart, TripEnd," +
+                           " Destination, BasePrice FROM BookingDetails WHERE BookingId = @pid;";
             using (SqlConnection con = new SqlConnection(GetConnectionString()))
             {
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
+                    con.Open();
                     cmd.Parameters.AddWithValue("@pid", packageid);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    return ds;
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        bd = new BookingDetails();
+                        bd.BookingDetailId = (int)reader["BookingDetailId"];
+                        bd.ItineraryNo = (double)reader["ItineraryNo"];
+                        bd.TripStart = (DateTime)reader["TripStart"];
+                        bd.TripEnd = (DateTime)reader["TripEnd"];
+                        bd.Destination = reader["Destination"].ToString();
+                        bd.BasePrice = Convert.ToDouble(reader["BasePrice"]);
+
+                        bdList.Add(bd);
+                    }
+                    reader.Close();
                 }
             }
+            return bdList;
         }
+
     }
 }

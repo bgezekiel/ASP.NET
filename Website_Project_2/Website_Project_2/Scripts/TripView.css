@@ -1,0 +1,26 @@
+﻿html {
+
+}
+
+body {
+    background: url(Images/clouds.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.divform{
+    margin-left:350px;
+}
+
+.labeltext{
+    color: black;
+    font-size:large;
+    font-weight:bold;
+}
+
+.navsetting{
+    background-color:black;
+}
+
+
+

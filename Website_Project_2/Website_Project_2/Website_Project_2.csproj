@@ -97,6 +97,7 @@
     <Content Include="fonts\login-icon-font.min.css" />
     <Content Include="fonts\material-design-iconic-font.css" />
     <Content Include="Images\bg-01.jpg" />
+    <Content Include="Images\clouds.jpg" />
     <Content Include="Images\email.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\favicon.ico" />
@@ -171,6 +172,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\TripView.css" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
@@ -199,6 +201,7 @@
     </Compile>
     <Compile Include="TripDetails.aspx.cs">
       <DependentUpon>TripDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TripDetails.aspx.designer.cs">
       <DependentUpon>TripDetails.aspx</DependentUpon>
