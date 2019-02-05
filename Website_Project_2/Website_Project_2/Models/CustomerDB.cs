@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -10,15 +11,21 @@ namespace Website_Project_2.Models
     [DataObject(true)]
     public static class CustomerDB
     {
+        private static string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings
+                ["ConnectionString"].ConnectionString;
+        }
+
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public static int AddCustomer(Customer cust)
         {
             int custID = 0;
-            SqlConnection connection = new SqlConnection();
+            SqlConnection connection = new SqlConnection(GetConnectionString());
 
             string insertString = "insert into Customers " +
                                   "(CustFirstName, CustLastName, CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, CustBusPhone, CustEmail, custUsername, custPassword) " +
-                                  "values(@CustFirstName, @CustLastName, @CustAddress, @CustPostal, @CustCountry, @CustHomePhone, @CustBusPhone, @CustEmail, @CustUserName, @CustPassword)";
+                                  "values(@CustFirstName, @CustLastName, @CustAddress, @CustCity, @CustProv, @CustPostal, @CustCountry, @CustHomePhone, @CustBusPhone, @CustEmail, @CustUserName, @CustPassword)";
             SqlCommand insertCommand = new SqlCommand(insertString, connection);
 
             insertCommand.Parameters.AddWithValue("@CustFirstName", cust.CustFirstName);
@@ -36,7 +43,7 @@ namespace Website_Project_2.Models
 
             try
             {
-                connection.Open();
+                
                 connection.Open();
 
                 // execute the statement
@@ -50,6 +57,7 @@ namespace Website_Project_2.Models
                     custID = Convert.ToInt32(selectCommand.ExecuteScalar());
 
                 }
+                
             }
             catch (Exception ex)
             {
@@ -66,7 +74,7 @@ namespace Website_Project_2.Models
         {
             bool successful = false;
             int count = 0;
-            SqlConnection connection = new SqlConnection();
+            SqlConnection connection = new SqlConnection(GetConnectionString());
 
             string updateString = "update Customers set " +
                                   "CustFirstName = @NewCustFirstName, " +

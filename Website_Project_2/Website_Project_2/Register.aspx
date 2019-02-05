@@ -62,16 +62,16 @@
                     <label class="col-sm-3 control-label">Province</label>
                     <div class="col-sm-4">
                         <asp:DropDownList ID="ddlProvince" runat="server" CssClass="form-control">
-                            <asp:ListItem>Alberta</asp:ListItem>
-                            <asp:ListItem>British Columbia</asp:ListItem>
-                            <asp:ListItem>Manitoba</asp:ListItem>
-                            <asp:ListItem>New Brunswick</asp:ListItem>
-                            <asp:ListItem>Newfoundland and Labrador</asp:ListItem>
-                            <asp:ListItem>Nova Scotia</asp:ListItem>
-                            <asp:ListItem>Ontario</asp:ListItem>
-                            <asp:ListItem>Prince Edward Island</asp:ListItem>
-                            <asp:ListItem>Quebec</asp:ListItem>
-                           <asp:ListItem>Saskatchewan</asp:ListItem>
+                            <asp:ListItem>AB</asp:ListItem>
+                            <asp:ListItem>BC</asp:ListItem>
+                            <asp:ListItem>MB</asp:ListItem>
+                            <asp:ListItem>NB</asp:ListItem>
+                            <asp:ListItem>NL</asp:ListItem>
+                            <asp:ListItem>NS</asp:ListItem>
+                            <asp:ListItem>ON</asp:ListItem>
+                            <asp:ListItem>PE</asp:ListItem>
+                            <asp:ListItem>QC</asp:ListItem>
+                           <asp:ListItem>SK</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>

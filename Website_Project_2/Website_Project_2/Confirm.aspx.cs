@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Website_Project_2.Models;
 
 namespace Website_Project_2
 {
@@ -35,8 +36,19 @@ namespace Website_Project_2
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            lblMessage.Text = "Thank you for your Registration.<br />" +
-                             "PLease log in at the login page";
+            int insert = 0;
+            // new customer object
+            Customer customer = (Customer)Session["Customer"];
+
+            insert = CustomerDB.AddCustomer(customer);
+
+            if (insert == 1)
+            {
+                lblMessage.Text = "Thank you for your Registration.<br />" +
+                                 "Please log in at the login page";
+            }
+            else
+                lblMessage.Text = "OG HOME";
         }
 
         protected void btnModify_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Website_Project_2
         {
             if (!IsPostBack)
             {
-               if (Session["Cusotmer"] != null)
+               if (Session["Customer"] != null)
                {
                     DisplayCustomer();
                }
