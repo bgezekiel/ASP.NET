@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Website_Project_2.Default" MasterPageFile="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="mainPlaceHolder" runat="server">
-    <h1>Welcome Page</h1>
-    <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="* means that the field is required" CssClass="text-danger" />
     <h3>Customer Registration</h3>
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="* means that the field is required" CssClass="text-danger" />
+    
 
     <h3>Contact information</h3>
                 <!--First Name string-->
@@ -80,7 +80,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Postal Code</label>
                     <div class="col-sm-4">
-                        <asp:TextBox ID="txtPostalCode" runat="server" TextMode="Email" 
+                        <asp:TextBox ID="txtPostalCode" runat="server" 
                             CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="col-sm-5">
@@ -88,9 +88,9 @@
                             ControlToValidate="txtPostalCode" text="*" CssClass="text-danger" Display="Dynamic">
                         </asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
-                            ControlToValidate="txtPostalCode" Text="Must be valid email address" 
+                            ControlToValidate="txtPostalCode" Text="Must be valid postal code" 
                             Display="Dynamic" CssClass="text-danger"
-                            ValidationExpression="^\d{5}-\d{4}|\d{5}|[A-Z]\d[A-Z] \d[A-Z]\d$">
+                            ValidationExpression="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$">
                         </asp:RegularExpressionValidator>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="col-sm-5">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
-                            ControlToValidate="txtFax" text="*" CssClass="text-danger" Display="Dynamic">
+                            ControlToValidate="txtBusinessPhone" text="*" CssClass="text-danger" Display="Dynamic">
                         </asp:RequiredFieldValidator>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                             ControlToValidate="txtBusinessPhone" Text="Use this format: 999-999-9999"

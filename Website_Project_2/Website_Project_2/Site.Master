@@ -6,12 +6,34 @@
 <head runat="server">
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form class="form-horizontal" runat="server">
         <div class="container">
+            
+              <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav> 
+
+            
+            <div>
             <header class="jumbotron">
                 <table>
                     <tr>
@@ -24,13 +46,16 @@
                     </tr>
                 </table>
             </header>
+            </div>
+            
+ 
             <main>
                 <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
             </main>
         
             <footer>
-                <p>&copy; @DateTime.Now.Year - Travel Experts</p>
+                <p>&copy; DateTime.Now.Year - Travel Experts</p>
             </footer>
         </div>
     </form>

@@ -7,13 +7,20 @@ using System.Web.UI.WebControls;
 
 namespace Website_Project_2
 {
+    //Mark branch
     public partial class Default : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
-               
+                if (Session["Customer"] != null)
+                {
+                    DisplayCustomer();
+                }
+                    
             }
 
         }
@@ -55,6 +62,20 @@ namespace Website_Project_2
             }
 
             
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtAddress.Text = "";
+            txtCity.Text = "";
+            ddlProvince.SelectedIndex = 0;
+            txtPostalCode.Text = "";
+            txtCountry.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtBusinessPhone.Text = "";
         }
     }
 }
