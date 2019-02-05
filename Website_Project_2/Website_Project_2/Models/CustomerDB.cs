@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
 namespace Website_Project_2.Models
 {
+    [DataObject(true)]
     public static class CustomerDB
     {
+        [DataObjectMethod(DataObjectMethodType.Insert)]
         public static int AddCustomer(Customer cust)
         {
             int custID = 0;
@@ -58,7 +61,7 @@ namespace Website_Project_2.Models
             }
             return custID;
         }
-
+        [DataObjectMethod(DataObjectMethodType.Update)]
         public static bool UpdateCustomer(Customer customer)
         {
             bool successful = false;

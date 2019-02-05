@@ -11,7 +11,7 @@ namespace Website_Project_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Customer customer = (Customer)Session["Customer"];
         }
 
     }
