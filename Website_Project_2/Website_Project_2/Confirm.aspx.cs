@@ -30,7 +30,6 @@ namespace Website_Project_2
             lblBusiness.Text = customer.CustBusPhone.ToString();
             lblEmail.Text = customer.CustEmail.ToString();
             lblUsername.Text = customer.CustUsername.ToString();
-            lblPassword.Text = customer.CustPassword.ToString();
 
         }
 

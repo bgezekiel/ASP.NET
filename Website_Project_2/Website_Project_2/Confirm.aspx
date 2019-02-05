@@ -167,7 +167,6 @@
                                     <label for="Password"><b>Password:</b></label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <asp:Label ID="lblPassword" runat="server"></asp:Label>
                                 </div>
                             </div>
 
