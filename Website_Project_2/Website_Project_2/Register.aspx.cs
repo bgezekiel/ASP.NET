@@ -22,9 +22,9 @@ namespace Website_Project_2
                }
                else
                 {
-                    
+
                 }
-             
+
             }
 
         }
@@ -44,7 +44,7 @@ namespace Website_Project_2
             txtEmail.Text = customer.CustEmail.ToString();
             txtUsername.Text = customer.CustUsername.ToString();
 
-            
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -69,15 +69,15 @@ namespace Website_Project_2
 				customer.CustPasswordHash = hash;
 				customer.CustPasswordSalt = salt;
 
-            
 
-                
+
+
 
                 Session["Customer"] = customer;
                 Response.Redirect("Confirm.aspx");
             }
 
-            
+
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
