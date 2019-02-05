@@ -1,6 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Website_Project_2.Confirm" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Website_Project_2.Confirm" %>--%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Website_Project_2.Confirm" MasterPageFile="~/Site.Master" %>
+<asp:Content ContentPlaceHolderID="mainPlaceHolder" runat="server">
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html lang="zxx" class="no-js">
 <head>
@@ -29,7 +31,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body>--%>
     <!-- start banner Area -->
     <section class="banner-area" id="home">
         <!-- Start Header Area -->
@@ -66,7 +68,7 @@
         <!-- End Header Area -->
     </section>
     <main>
-        <form id="form1" runat="server" class="form-horizontal">
+        <form id="form1" class="form-horizontal">
             <div class="main">
                 <div class="container">
                     <div class="signup-content">
@@ -196,7 +198,7 @@
 
 
     <!-- start footer Area -->
-    <footer class="footer-area section-gap">
+   <%-- <footer class="footer-area section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-6">
@@ -254,10 +256,10 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>--%>
     <!-- End footer Area -->
 
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+   <%-- <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
@@ -270,4 +272,5 @@
     <script src="js/main.js"></script>
 
 </body>
-</html>
+</html>--%>
+</asp:Content>

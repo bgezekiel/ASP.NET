@@ -1,8 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Website_Project_2.Default" MasterPageFile="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="mainPlaceHolder" runat="server">
-    <h1>Welcome Page</h1>
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="* means that the field is required" CssClass="text-danger" />
-    <h3>Customer Registration</h3>
+    <h1>Customer Registration</h1>
 
     <h3>Contact information</h3>
                 <!--First Name string-->
