@@ -78,31 +78,55 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\animate.min.css" />
+    <Content Include="css\animatelogin.css" />
+    <Content Include="css\animsition.min.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstraploginin.min.css" />
+    <Content Include="css\daterangepicker.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\hamburgers.min.css" />
     <Content Include="css\linearicons.css" />
     <Content Include="css\magnific-popup.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\mainlogin.css" />
     <Content Include="css\owl.carousel.css" />
+    <Content Include="css\select2.min.css" />
     <Content Include="css\style.css" />
+    <Content Include="css\util.css" />
+    <Content Include="fonts\font-awesomelogin.min.css" />
+    <Content Include="fonts\login-icon-font.min.css" />
     <Content Include="fonts\material-design-iconic-font.css" />
+    <Content Include="Images\bg-01.jpg" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\plane.jpg" />
     <Content Include="img\play-btn.png" />
     <Content Include="img\slider1.jpg" />
     <Content Include="img\slider2.jpg" />
     <Content Include="img\slider3.jpg" />
+    <Content Include="js\animsitionlogin.min.js" />
+    <Content Include="js\bootstraplogin.min.js" />
+    <Content Include="js\countdowntime.js" />
+    <Content Include="js\daterangepicker.js" />
     <Content Include="js\jquery.ajaxchimp.min.js" />
     <Content Include="js\jquery.counterup.min.js" />
     <Content Include="js\jquery.magnific-popup.min.js" />
     <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\jquerylogin-3.2.1.min.js" />
     <Content Include="js\main.js" />
+    <Content Include="js\mainlogin.js" />
     <Content Include="js\mainreg.js" />
+    <Content Include="js\moment.min.js" />
     <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\popperlogin.js" />
+    <Content Include="js\select2.min.js" />
     <Content Include="js\slick.js" />
     <Content Include="js\vendor\bootstrap.min.js" />
     <Content Include="js\vendor\jquery-2.2.4.min.js" />
     <Content Include="js\vendor\jquery.min.js" />
     <Content Include="js\waypoints.min.js" />
+    <Content Include="login.aspx" />
     <Content Include="Main.aspx" />
+    <Content Include="plane.jpg" />
     <Content Include="Register.aspx" />
     <Content Include="Images\beachphoto.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -154,6 +178,13 @@
     <Compile Include="App_Code\Bookings.cs" />
     <Compile Include="App_Code\Package.cs" />
     <Compile Include="App_Code\PackageDB.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

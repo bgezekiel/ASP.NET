@@ -57,7 +57,7 @@
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="Register.aspx">Register</a>
-                                    <a class="dropdown-item" href="elements.html">Log In</a>
+                                    <a class="dropdown-item" href="login.aspx">Log In</a>
                                 </div>
                             </li>
                         </ul>
@@ -68,6 +68,7 @@
         <!-- End Header Area -->
     </section>
 
+    <!-- start of slider -->
     <section class="default-banner active-blog-slider">
         <div class="item-slider relative" style="background: url(img/slider1.jpg); background-size: cover;">
             <div class="overlay" style="background: rgba(0,0,0,.3)"></div>
