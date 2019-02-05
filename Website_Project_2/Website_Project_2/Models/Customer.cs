@@ -33,7 +33,9 @@ namespace Website_Project_2
 
         public string CustUsername { get; set; }
 
-        public string CustPassword { get; set; }
+        public string CustPasswordHash { get; set; }
+
+		public string CustPasswordSalt { get; set; }
  
     }
 }
