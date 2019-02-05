@@ -18,6 +18,13 @@ body {
     font-weight:bold;
 }
 
+.labeltext2 {
+    text-align: center;
+    margin-left: 200px;
+    font-size: large;
+    font-weight: bold;
+}
+
 .navsetting{
     background-color:black;
 }
