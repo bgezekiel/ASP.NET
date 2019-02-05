@@ -1,0 +1,18 @@
+﻿body {
+    background-image: url('../../Images/back.jpeg');
+}
+
+h5 {
+    color: white;
+    font: bolder;
+    font-size: x-large;
+    text-align:center;
+}
+
+label {
+    background-color: black;
+    width: 250px;
+    border-radius: 10px;
+}
+
+

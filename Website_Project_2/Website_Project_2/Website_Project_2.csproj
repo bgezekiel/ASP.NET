@@ -80,6 +80,7 @@
     <Content Include="css\animate.min.css" />
     <Content Include="css\animatelogin.css" />
     <Content Include="css\animsition.min.css" />
+    <Content Include="css\background.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstraploginin.min.css" />
     <Content Include="css\daterangepicker.css" />
@@ -96,6 +97,7 @@
     <Content Include="fonts\font-awesomelogin.min.css" />
     <Content Include="fonts\login-icon-font.min.css" />
     <Content Include="fonts\material-design-iconic-font.css" />
+    <Content Include="Images\back.jpeg" />
     <Content Include="Images\bg-01.jpg" />
     <Content Include="Images\clouds.jpg" />
     <Content Include="Images\email.png" />
