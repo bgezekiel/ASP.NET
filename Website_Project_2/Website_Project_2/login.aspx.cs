@@ -48,7 +48,7 @@ namespace Website_Project_2
 
 			if(!((hash == null || salt == null) || SHA512Check(FieldPassword.Text, hash, salt) == false)) {
 				Session["LoggedInId"] = id;
-				Response.Redirect("Main.aspx");
+				Response.Redirect("TripDetails.aspx");
 				return;
 			}
 
