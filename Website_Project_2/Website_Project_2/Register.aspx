@@ -5,7 +5,7 @@
     <%--<h1>Customer Registration</h1>
 
     <h3>Contact information</h3>--%>
-    <main>
+    <main >
         <form id="form1" class="form-horizontal">
             <div class="main">
                 <div class="container">
@@ -239,5 +239,16 @@
             </div>
         </form>
     </main>
+  <%--  <script>
+        
+        
+            var x = document.querySelectorAll(".form-control");
 
+        for (i = 0; i < x.length; i++)
+            {
+                x[i].value = "";
+            }
+        
+        
+    </script>--%>
 </asp:Content>

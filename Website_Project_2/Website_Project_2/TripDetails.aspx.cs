@@ -19,39 +19,43 @@ namespace Website_Project_2
 			
         }
 
-		protected void GridLoaded(object sender, EventArgs e) {
-			if(DropDownList1.Items.Count == 0) {
-				DropDownList1.Visible = false;
-				GridView2.Visible = false;
-				Label1.Visible = false;
-				Label2.Visible = false;
-				Label3.Visible = false;
-				txtPaymentOutstanding.Visible = false;
-				txtPaymentReceieved.Visible = false;
-				txtTotal.Visible = false;
-				BookingsLabel.Visible = false;
-				LblHidden.Visible = true;
-				DetailsLabel.Visible = false;
-				return;
-			}
+        protected void GridLoaded(object sender, EventArgs e)
+        {
+            if (DropDownList1.Items.Count == 0)
+            {
+                DropDownList1.Visible = false;
+                GridView2.Visible = false;
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Label3.Visible = false;
+                txtPaymentOutstanding.Visible = false;
+                txtPaymentReceieved.Visible = false;
+                txtTotal.Visible = false;
+                BookingsLabel.Visible = false;
+                LblHidden.Visible = true;
+                DetailsLabel.Visible = false;
+                return;
+            }
 
 
-			double count = 0;
+            double count = 0;
 
-			foreach(GridViewRow gvr in GridView2.Rows) {
+            foreach (GridViewRow gvr in GridView2.Rows)
+            {
 
-				if (!string.IsNullOrEmpty(gvr.Cells[5].Text)) {
-					count += Convert.ToDouble(gvr.Cells[5].Text.Replace("$", "").Replace(",", ""));
-				}
-			}
-
-
-
-			txtTotal.Text = count.ToString("c");
-			txtPaymentReceieved.Text = "$0.00";
-			txtPaymentOutstanding.Text = txtTotal.Text;
+                if (!string.IsNullOrEmpty(gvr.Cells[5].Text))
+                {
+                    count += Convert.ToDouble(gvr.Cells[5].Text.Replace("$", "").Replace(",", ""));
+                }
+            }
 
 
-		}
+
+            txtTotal.Text = count.ToString("c");
+            txtPaymentReceieved.Text = "$0.00";
+            txtPaymentOutstanding.Text = txtTotal.Text;
+
+
+        }
 	}
 }

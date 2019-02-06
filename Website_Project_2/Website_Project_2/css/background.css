@@ -1,5 +1,9 @@
 ﻿body {
     background-image: url('../../Images/back.jpeg');
+    background-position: top;
+    background-repeat:no-repeat;
+    height: 100%;
+    width: 100%;
 }
 
 h5 {
@@ -15,4 +19,31 @@ label {
     border-radius: 10px;
 }
 
+footer {
+    position: relative;
+    margin-top: 18%;
+    
+    
+}
+
+.divform {
+    margin-left: 35%;
+}
+
+.labeltext {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.labeltext2 {
+    text-align: center;
+    margin-left: 200px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.navsetting {
+    background-color: black;
+}
 

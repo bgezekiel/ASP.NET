@@ -18,9 +18,10 @@ namespace Website_Project_2
 				LblIncorrect.Visible = true;
 			}
 
+            
         }
 
-		public void Login(object sender, EventArgs e) {
+        public void Login(object sender, EventArgs e) {
 
 
 			string hash = null;
@@ -52,7 +53,6 @@ namespace Website_Project_2
 				return;
 			}
 
-			
 		}
 
 		private static string GetConnectionString() {
@@ -79,5 +79,10 @@ namespace Website_Project_2
 
 
 		}
-	}
+
+        protected void btnSignup_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
+    }
 }

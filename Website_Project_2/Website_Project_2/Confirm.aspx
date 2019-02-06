@@ -2,7 +2,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="Website_Project_2.Confirm" MasterPageFile="~/Site.Master" %>
 <asp:Content ContentPlaceHolderID="mainPlaceHolder" runat="server">
 
-<%--<!DOCTYPE html>
+    <%--<!DOCTYPE html>
 
 <html lang="zxx" class="no-js">
 <head>

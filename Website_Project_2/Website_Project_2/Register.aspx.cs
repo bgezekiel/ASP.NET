@@ -21,11 +21,23 @@ namespace Website_Project_2
                     DisplayCustomer();
                }
                else
-                {
-
+               {
+                    txtFirstName.Text = "";
+                    txtLastName.Text = "";
+                    txtAddress.Text = "";
+                    txtCity.Text = "";
+                    ddlProvince.SelectedIndex = 0;
+                    txtPostalCode.Text = "";
+                    txtCountry.Text = "";
+                    txtEmail.Text = "";
+                    txtPhone.Text = "";
+                    txtBusinessPhone.Text = "";
+                    txtUsername.Text = "";
+                    txtPass.Text = "";
                 }
 
             }
+           
 
         }
         private void DisplayCustomer()

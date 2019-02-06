@@ -47,7 +47,13 @@ namespace Website_Project_2
                                  "Please log in at the login page";
             }
             else
-                lblMessage.Text = "OG HOME";
+            {
+                lblMessage.Text = "Thank you for your Registration.< br /> " +
+                                 "Please log in at the login page";
+            }
+                
+
+            Response.Redirect("login.aspx");
         }
 
         protected void btnModify_Click(object sender, EventArgs e)
