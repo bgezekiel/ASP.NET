@@ -48,7 +48,7 @@
                     <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li><a href="Main.aspx">Home</a></li>
-                            <li><a href="#about">Account Details</a></li>
+                            <li><a href="TripDetails.aspx">Booking Details</a></li>
                             <li><a href="#secvice">Packages</a></li>
                             <li><a href="#gallery">Contact</a></li>
                             <!-- Dropdown -->

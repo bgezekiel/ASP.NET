@@ -18,9 +18,10 @@ namespace Website_Project_2
 				LblIncorrect.Visible = true;
 			}
 
+            
         }
 
-		public void Login(object sender, EventArgs e) {
+        public void Login(object sender, EventArgs e) {
 
 
 			string hash = null;
@@ -48,41 +49,16 @@ namespace Website_Project_2
 
 			if(!((hash == null || salt == null) || SHA512Check(FieldPassword.Text, hash, salt) == false)) {
 				Session["LoggedInId"] = id;
-				Response.Redirect("Main.aspx");
+				Response.Redirect("TripDetails.aspx");
 				return;
 			}
 
-			
 		}
 
 		private static string GetConnectionString() {
 			return ConfigurationManager.ConnectionStrings
 				["ConnectionString"].ConnectionString;
 
-		}
-		public static string SHA512Hash(string input, out string saltout) {
-
-			Random random = new Random();
-			string chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
-			char[] vals = new char[12];
-
-			for (int i = 0; i < vals.Length; i++) {
-				vals[i] = chars[random.Next(chars.Length)];
-			}
-
-			saltout = new string(vals);
-
-			input = input + saltout;
-
-			var bytes = System.Text.Encoding.UTF8.GetBytes(input);
-			using (var hash = System.Security.Cryptography.SHA512.Create()) {
-				var hashed = hash.ComputeHash(bytes);
-
-				var hashedInputStringBuilder = new System.Text.StringBuilder(128);
-				foreach (var b in hashed)
-					hashedInputStringBuilder.Append(b.ToString("X2"));
-				return hashedInputStringBuilder.ToString();
-			}
 		}
 
 		public static bool SHA512Check(string plaintext, string oldhash, string salt) {
@@ -103,5 +79,10 @@ namespace Website_Project_2
 
 
 		}
-	}
+
+        protected void btnSignup_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
+    }
 }

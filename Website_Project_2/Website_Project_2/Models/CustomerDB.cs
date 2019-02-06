@@ -24,9 +24,11 @@ namespace Website_Project_2.Models
             SqlConnection connection = new SqlConnection(GetConnectionString());
 
             string insertString = "insert into Customers " +
-                                  "(CustFirstName, CustLastName, CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, CustBusPhone, CustEmail, custUsername, custPassword) " +
-                                  "values(@CustFirstName, @CustLastName, @CustAddress, @CustCity, @CustProv, @CustPostal, @CustCountry, @CustHomePhone, @CustBusPhone, @CustEmail, @CustUserName, @CustPassword)";
+                                  "(CustFirstName, CustLastName, CustAddress, CustCity, CustProv, CustPostal, CustCountry, CustHomePhone, CustBusPhone, CustEmail, CustUsername, CustPassword, CustSalt) " +
+                                  "values(@CustFirstName, @CustLastName, @CustAddress, @CustCity, @CustProv, @CustPostal, @CustCountry, @CustHomePhone, @CustBusPhone, @CustEmail, @CustUserName, @CustPassword, @CustSalt)";
             SqlCommand insertCommand = new SqlCommand(insertString, connection);
+
+
 
             insertCommand.Parameters.AddWithValue("@CustFirstName", cust.CustFirstName);
             insertCommand.Parameters.AddWithValue("@CustLastName", cust.CustLastName);
@@ -39,7 +41,8 @@ namespace Website_Project_2.Models
             insertCommand.Parameters.AddWithValue("@CustBusPhone", cust.CustBusPhone);
             insertCommand.Parameters.AddWithValue("@CustEmail", cust.CustEmail);
             insertCommand.Parameters.AddWithValue("@CustUsername", cust.CustUsername);
-            insertCommand.Parameters.AddWithValue("@CustPassword", cust.CustPassword);
+            insertCommand.Parameters.AddWithValue("@CustPassword", cust.CustPasswordHash);
+			insertCommand.Parameters.AddWithValue("@CustSalt", cust.CustPasswordSalt);
 
             try
             {
@@ -69,7 +72,8 @@ namespace Website_Project_2.Models
             }
             return custID;
         }
-        [DataObjectMethod(DataObjectMethodType.Update)]
+
+		[DataObjectMethod(DataObjectMethodType.Update)]
         public static bool UpdateCustomer(Customer customer)
         {
             bool successful = false;
@@ -99,7 +103,7 @@ namespace Website_Project_2.Models
             updateCommand.Parameters.AddWithValue("@NewCustBusPhone", customer.CustLastName);
             updateCommand.Parameters.AddWithValue("@NewCustEmail", customer.CustEmail);
             updateCommand.Parameters.AddWithValue("@NewCustUsername", customer.CustUsername);
-            updateCommand.Parameters.AddWithValue("@CustEmail", customer.CustPassword);
+            updateCommand.Parameters.AddWithValue("@CustEmail", customer.CustPasswordHash);
 
             try
             {

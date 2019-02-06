@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/mainlogin.css">
     <!--===============================================================================================-->
+
 </head>
 <body>
 
@@ -39,37 +40,38 @@
                     </span>
 
                     <div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-                        <asp:TextBox runat="server" ID="FieldUsername" CssClass="input100" type="text" placeholder="Username"/>
+                        <asp:TextBox runat="server" ID="FieldUsername" CssClass="input100" type="text" placeholder="Username" />
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-                        <asp:TextBox runat="server" ID="FieldPassword" CssClass="input100" type="password" placeholder="Password"/>
+                        <asp:TextBox runat="server" ID="FieldPassword" CssClass="input100" type="password" placeholder="Password" />
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="container-login100-form-btn">
-                        <asp:Button runat="server" CssClass="login100-form-btn" ID="BtnSubmit" Text="Log In" OnClick="Login"/>
+                        <asp:Button runat="server" CssClass="login100-form-btn" ID="BtnSubmit" Text="Log In" OnClick="Login" />
                     </div>
 
                     <div class="w-full text-center p-t-27 p-b-239">
-						<span class="txt1">
-							Forgot
-						</span>
+                        <span class="txt1">Forgot
+                        </span>
 
-						<a href="#" class="txt2">
-							User name / password?
-						</a>
-                        <br />
-                        <br />
-                        <asp:Label ID="LblIncorrect" runat="server" CssClass="txt3" style="color:red;" Text="Incorrect username or password. Please try again." Visible="false"/>
-
-                                            <div class="w-full text-center">
-                                                <br />
-                                                <br />
-                        <a href="register.aspx" class="txt3">Sign Up
+                        <a href="#" class="txt2">User name / password?
                         </a>
+                        <br />
+                        <br />
+                        <asp:Label ID="LblIncorrect" runat="server" CssClass="txt3" Style="color: red;" Text="Incorrect username or password. Please try again." Visible="false" />
+
+                        <div class="w-full text-center">
+                            <br />
+                            <br />
+                            <div class="container-login100-form-btn">
+                                <a class="login100-form-btn" href="Register.aspx">Register</a> 
+                                <asp:Button runat="server" CssClass="login100-form-btn" ID="btnSignup" Text="Sign Up" OnClick="btnSignup_Click" CausesValidation="False" PostBackUrl="~/Register.aspx" />
+                            </div>
+
+                        </div>
                     </div>
-					</div>
                 </form>
 
                 <div class="login100-more" style="background-image: url('images/plane.jpg');"></div>

@@ -1,13 +1,4 @@
-﻿html {
-
-}
-
-body {
-    background: url(Images/clouds.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
-}
-
+﻿
 .divform{
     margin-left:350px;
 }
@@ -16,6 +7,13 @@ body {
     color: black;
     font-size:large;
     font-weight:bold;
+}
+
+.labeltext2 {
+    text-align: center;
+    margin-left: 200px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .navsetting{

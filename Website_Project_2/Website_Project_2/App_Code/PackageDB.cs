@@ -52,28 +52,27 @@ namespace Website_Project_2.App_Code
         }
 
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public static List<Bookings> GetNewBookings()
+        public static List<Bookings> GetNewBookings(int custid)
         {
             List<Bookings> booking = new List<Bookings>();
             Bookings b;
             using (SqlConnection con = new SqlConnection(GetConnectionString()))
             {
                 con.Open();
-                using (SqlCommand cmd = new SqlCommand("SELECT Bookings.BookingId,BookingDetails.Destination FROM Bookings JOIN BookingDetails ON Bookings.BookingId = BookingDetails.BookingId;", con))//WHERE CustomerId = @cid
-                {
-                    //cmd.Parameters.AddWithValue("@cid", custid);
-                    SqlDataReader reader = cmd.ExecuteReader();
+				using (SqlCommand cmd = new SqlCommand("SELECT Bookings.BookingId,BookingDetails.Destination FROM Bookings JOIN BookingDetails ON Bookings.BookingId = BookingDetails.BookingId WHERE CustomerId = @cid;", con)) 
+					{
+						cmd.Parameters.AddWithValue("@cid", custid);
+						SqlDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
-                    {
-                        b = new Bookings();
-                        b.BookingId = (int)reader["BookingId"];
-                        b.BookingNo = reader["Destination"].ToString();
+						while (reader.Read()) {
+							b = new Bookings();
+							b.BookingId = (int)reader["BookingId"];
+							b.BookingNo = reader["Destination"].ToString();
 
-                        booking.Add(b);
-                    }
-                    reader.Close();
-                }
+							booking.Add(b);
+					}
+					reader.Close();
+				}
 
             }
 
