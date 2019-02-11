@@ -1,5 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Website_Project_2.login" %>
 
+    <%--
+  Class: OOSD threaded project 2
+        This is the login form page that allows the user to login. All passwords are salted and hashed
+        in the database. All labels, div classes and buttons are named accordingly and is self explainatory. 
+        No other comments are provided throughout this page.
+  Author: Hayden Belanger
+  Date: Feb 2019
+  Commentor: Eugenia Chiu   
+        --%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,4 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Website_Project_2.Main" %>
+    <%--
+  Class: OOSD threaded project 2
+        This is the main landing page that allows the user to login. 
+        All labels, div classes and buttons are named accordingly and is self explainatory. 
+        No other comments are provided throughout this page.
+  Author: Brandon Ezekiel
+  Date: Feb 2019
+  Commentor: Eugenia Chiu   
+        --%>
 
 <!DOCTYPE html>
 

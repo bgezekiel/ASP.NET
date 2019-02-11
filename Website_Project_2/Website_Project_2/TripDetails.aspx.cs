@@ -7,6 +7,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Website_Project_2.App_Code;
 
+/*
+ * Class:OOSD Threaded project 2
+ * This is the code behind the HTML bookings and booking details page. This allows users to view and see
+ * their bookings and booking details
+ * Author: Eugenia Chiu
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ * **/
+
 namespace Website_Project_2
 {
     public partial class TripDetails : System.Web.UI.Page

@@ -7,13 +7,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/*
+ * Class:OOSD Threaded project 2
+ * 
+ * This is the login page background code
+ * 
+ * Author: Hayden Belanger
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ * **/
+
 namespace Website_Project_2
 {
     public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if page has postback and was reloaded, display incorrect text
 			if (IsPostBack) {
 				LblIncorrect.Visible = true;
 			}
@@ -35,10 +45,10 @@ namespace Website_Project_2
 
 					SqlDataReader sdr = cmd.ExecuteReader();
 
-					while (sdr.Read()) {
+					while (sdr.Read()) { //while there is data
 
-						if(!(sdr.IsDBNull(0) || sdr.IsDBNull(1))) {
-							hash = sdr.GetString(0);
+						if(!(sdr.IsDBNull(0) || sdr.IsDBNull(1))) { //if the input fields are not null
+							hash = sdr.GetString(0); //insert data into variables
 							salt = sdr.GetString(1);
 							id = sdr.GetInt32(2);
 						}
@@ -47,6 +57,7 @@ namespace Website_Project_2
 				}
 			}
 
+            //if password and user is hashed and salted and valid, go to tripdetails page
 			if(!((hash == null || salt == null) || SHA512Check(FieldPassword.Text, hash, salt) == false)) {
 				Session["LoggedInId"] = id;
 				Response.Redirect("TripDetails.aspx");
@@ -55,12 +66,14 @@ namespace Website_Project_2
 
 		}
 
+        //connection string method
 		private static string GetConnectionString() {
 			return ConfigurationManager.ConnectionStrings
 				["ConnectionString"].ConnectionString;
 
 		}
 
+        //check if user and pass is hashed and salted. 
 		public static bool SHA512Check(string plaintext, string oldhash, string salt) {
 
 			plaintext = plaintext + salt;
@@ -80,6 +93,7 @@ namespace Website_Project_2
 
 		}
 
+        //if signup button is clicked, redirect to register page
         protected void btnSignup_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");

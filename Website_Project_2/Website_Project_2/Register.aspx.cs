@@ -5,6 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/*
+ * Class:OOSD Threaded project 2
+ * This is thecode that supports the register page
+ * 
+ * Author: Mark Wessley
+ * CoAuthor: Brandon Ezekiel
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ * **/
+
 namespace Website_Project_2
 {
     //Mark branch
@@ -14,13 +24,13 @@ namespace Website_Project_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (!IsPostBack) // if there is no postback
             {
-               if (Session["Customer"] != null)
+               if (Session["Customer"] != null) //if there is a customer in session already
                {
-                    DisplayCustomer();
+                    DisplayCustomer(); //display customer info
                }
-               else
+               else //else, make all fields blank allowing user to enter info
                {
                     txtFirstName.Text = "";
                     txtLastName.Text = "";
@@ -40,6 +50,8 @@ namespace Website_Project_2
            
 
         }
+
+        //display customer method that loads info from the session info
         private void DisplayCustomer()
         {
             Customer customer = (Customer)Session["Customer"];
@@ -59,13 +71,14 @@ namespace Website_Project_2
 
         }
 
+        //submit button method
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (IsValid)
+            if (IsValid) //if the form has been filled out and is valid
             {
-                Customer customer = new Customer();
+                Customer customer = new Customer(); //create a new customer
 
-				string hash = SHA512Hash(txtPass.Text, out string salt);
+				string hash = SHA512Hash(txtPass.Text, out string salt); //hash the password and salt
 
                 customer.CustFirstName = Convert.ToString(txtFirstName.Text);
                 customer.CustLastName = Convert.ToString(txtLastName.Text);
@@ -78,20 +91,21 @@ namespace Website_Project_2
                 customer.CustBusPhone = Convert.ToString(txtBusinessPhone.Text);
                 customer.CustEmail = Convert.ToString(txtEmail.Text);
                 customer.CustUsername = Convert.ToString(txtUsername.Text);
-				customer.CustPasswordHash = hash;
-				customer.CustPasswordSalt = salt;
+				customer.CustPasswordHash = hash; //hash pass
+				customer.CustPasswordSalt = salt; //salt pass
 
 
 
 
 
                 Session["Customer"] = customer;
-                Response.Redirect("Confirm.aspx");
+                Response.Redirect("Confirm.aspx"); //direct to confirm page
             }
 
 
         }
 
+        //clear button method
         protected void btnClear_Click(object sender, EventArgs e)
         {
             txtFirstName.Text = "";
@@ -108,6 +122,8 @@ namespace Website_Project_2
             txtPass.Text = "";
         }
 
+        //hashing password method
+        //Author: Hayden Belanger
 		public static string SHA512Hash(string input, out string saltout) {
 
 			Random random = new Random();

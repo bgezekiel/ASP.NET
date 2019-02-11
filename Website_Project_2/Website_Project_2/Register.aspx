@@ -1,5 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Website_Project_2.Default" MasterPageFile="~/Site.Master" %>
-
+    <%--
+  Class: OOSD threaded project 2
+        This is the register form page that allows the user to register. 
+        All labels, div classes and buttons are named accordingly and is self explainatory. 
+        No other comments are provided throughout this page.
+  Author: Mark Wessley
+  CoAuthor: Brandon Ezekiel
+  Date: Feb 2019
+  Commentor: Eugenia Chiu   
+        --%>
 <asp:Content ContentPlaceHolderID="mainPlaceHolder" runat="server">
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" HeaderText="* means that the field is required" CssClass="text-danger" />
     <%--<h1>Customer Registration</h1>

@@ -7,33 +7,46 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
+/*
+ * Class:OOSD fall 2 threaded project 
+ * This is the packages DB class that contains all the objects and methods used in the 
+ * HTML webpage to connect with database and use
+ * 
+ * Author: Eugenia Chiu
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ **/
+
 namespace Website_Project_2.App_Code
 {
+    //set class to be dataobject so html GUI wizard can find and use
     [DataObject(true)] 
     public static class PackageDB
     {
+        //setup connection string ("ConnectionString" is pulled from web.config file)
         private static string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings
                 ["ConnectionString"].ConnectionString;
         }
 
+        //set data object to select type
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Package> GetPackages(int packID)
         {
-            List<Package> pack = new List<Package>();
-            Package p;
+            List<Package> pack = new List<Package>(); //make empty list
+            Package p;//set new variable p as a new package
             string sql = "SELECT PackageId, PkgName, PkgStartDate, PkgEndDate, PkgDesc FROM Packages WHERE PackageId = @PackageId";
 
-            using (SqlConnection con = new SqlConnection(GetConnectionString()))
+            using (SqlConnection con = new SqlConnection(GetConnectionString())) //using sql connection
             {
-                using (SqlCommand cmd = new SqlCommand(sql, con))
+                using (SqlCommand cmd = new SqlCommand(sql, con))//using sql connection and string, make command
                 {
-                    cmd.Parameters.AddWithValue("@PackageId", packID);
+                    cmd.Parameters.AddWithValue("@PackageId", packID); //protect against sql injection
                     con.Open();
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    while (reader.Read())
+                    while (reader.Read()) //while there is data, read and add to empty list
                     {
                         p = new Package();
                         p.PackageId = (int)reader["PackageId"];
@@ -45,13 +58,16 @@ namespace Website_Project_2.App_Code
 
                         pack.Add(p);
                     }
-                    reader.Close();
+                    reader.Close(); //close reader once done
                 }
             }
             return pack;
         }
 
+        //make data object for selecting booking details
         [DataObjectMethod(DataObjectMethodType.Select)]
+
+        //take in customer id from session
         public static List<Bookings> GetNewBookings(int custid)
         {
             List<Bookings> booking = new List<Bookings>();
@@ -63,7 +79,8 @@ namespace Website_Project_2.App_Code
 					{
 						cmd.Parameters.AddWithValue("@cid", custid);
 						SqlDataReader reader = cmd.ExecuteReader();
-
+                        
+                    //get customer bookings with the session customer id
 						while (reader.Read()) {
 							b = new Bookings();
 							b.BookingId = (int)reader["BookingId"];
@@ -79,6 +96,8 @@ namespace Website_Project_2.App_Code
             return booking;
         }
 
+        //empty default one for testing purposes, is not bound to object in html
+        //use this to test html page with no customer data
         [DataObjectMethod(DataObjectMethodType.Select)]
         public static List<Bookings> GetBookings() //customerId needs to be passed from session as parameter
         {
@@ -108,6 +127,7 @@ namespace Website_Project_2.App_Code
             return booking;
         }
 
+        //get booking details method from the booking selected in dropdown
         [DataObjectMethod(DataObjectMethodType.Select)]
 
         public static List<BookingDetails> GetBookingDetails(int packageid)

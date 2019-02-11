@@ -6,17 +6,31 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
+/*
+ * Class:OOSD fall 2 threaded project 
+ * This is the customer DB class with all the objects and methods to connect HTML to 
+ * database for use
+ * 
+ * Author: Brandon Ezekiel
+ * CoAuthor: Hayden Belanger
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ **/
+
 namespace Website_Project_2.Models
 {
+    //set class to a data object for the html wizard to see and use
     [DataObject(true)]
     public static class CustomerDB
     {
+        //set up connection string
         private static string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings
                 ["ConnectionString"].ConnectionString;
         }
 
+        //Data object for inserting new customer into database
         [DataObjectMethod(DataObjectMethodType.Insert)]
         public static int AddCustomer(Customer cust)
         {
@@ -73,6 +87,7 @@ namespace Website_Project_2.Models
             return custID;
         }
 
+        //data object to update the customer info in the database
 		[DataObjectMethod(DataObjectMethodType.Update)]
         public static bool UpdateCustomer(Customer customer)
         {

@@ -1,5 +1,13 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Website_Project_2.Site" %>
-
+    <%--
+  Class: OOSD threaded project 2
+        This is the site master that contains the header and footer. It also contains the form div 
+        containers that will streamline whole website. All labels, div containers and buttons are named
+        accordingly and self explainatory. No other comments will be provided. 
+  Author: Mark Wessley
+  Date: Feb 2019
+  Commentor: Eugenia Chiu   
+        --%>
 <!DOCTYPE html>
 
 <html>

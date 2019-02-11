@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+/*
+ * Class:OOSD fall 2 threaded project 
+ * This is the get customer details class with all the getters and setters
+ * 
+ * Author: Mark Wessley
+ * Date: Feb 2019
+ * Commentor: Eugenia Chiu
+ * 
+ **/
+
 namespace Website_Project_2
 {
     public class Customer
